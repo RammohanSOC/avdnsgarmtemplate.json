@@ -90,6 +90,20 @@
             }
           },
           {
+            "name": "Allow-AzureStorage",
+            "properties": {
+              "priority": 135,
+              "direction": "Outbound",
+              "access": "Allow",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "443",
+              "sourceAddressPrefix": "VirtualNetwork",
+              "destinationAddressPrefix": "Storage",
+              "description": "Azure Storage access (required for DSC extension / session host registration artifacts)"
+            }
+          },
+          {
             "name": "Allow-WindowsActivation",
             "properties": {
               "priority": 130,
